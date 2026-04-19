@@ -1,0 +1,22 @@
+from strategy_config import StrategyConfig
+
+
+def run_backtest(config: StrategyConfig) -> dict:
+    """
+    Temporary fake backtest runner.
+    Later this will call the real Python strategy and backtester.
+    """
+    aggression_score = config.max_order_size / config.base_order_size
+
+    fake_pnl = round(100 + aggression_score * 12 - config.arb_threshold * 20, 2)
+    fake_sharpe = round(1.0 + aggression_score * 0.1, 2)
+    fake_drawdown = round(-50 - config.max_order_size * 0.8, 2)
+    fake_trade_count = int(config.base_order_size * 8)
+
+    return {
+        "pnl": fake_pnl,
+        "sharpe": fake_sharpe,
+        "max_drawdown": fake_drawdown,
+        "trade_count": fake_trade_count,
+        "config_used": config.model_dump(),
+    }
