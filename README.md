@@ -101,5 +101,26 @@ Follow these steps to run the full application.
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+Go to https://github.com/austntatious/DATAHACKS2026/tree/main and follow the instructions
+
+
+### 2. Navigate to the web app folder
+
+Create a webapp folder in the folder
+Inside the webapp, create a frontend folder
+
+### 3. Clone the repository
+
+download backend and app on git and put backend inside webapp and app in frontend
+
+### 4. Change strategy
+
+download the py in webapp_version folder and replace the _strategy.py in DataHacks folder
+
+### 5. Run
+
+Run npx create-next-app@latest frontend in webapp on terminal
+Use npm run dev to run the frontend
+Use python -m uvicorn app:app --host 0.0.0.0 --port 8000 to run backend
+Remember to run in the correct location
+
