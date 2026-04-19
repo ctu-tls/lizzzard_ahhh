@@ -24,7 +24,7 @@ TAKE_PROFIT = 0.12
 STOP_LOSS = 0.05
 
 
-class GrokStrategy3(BaseStrategy):
+class LizzzardStrategy(BaseStrategy):
     def __init__(self) -> None:
         self.btc_history = deque(maxlen=300)
         self.entered_markets = set()
