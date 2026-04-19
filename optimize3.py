@@ -20,7 +20,7 @@ from backtester.strategy import (
 )
 
 
-class GrokStrategy3(BaseStrategy):
+class Strategy3(BaseStrategy):
     def __init__(self) -> None:
         self.btc_history = deque(maxlen=300)
         self.entered_markets = set()
